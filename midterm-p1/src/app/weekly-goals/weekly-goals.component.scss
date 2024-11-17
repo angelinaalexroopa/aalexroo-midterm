@@ -1,0 +1,91 @@
+/* weekly-goals.component.scss */
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f7fb;
+    color: #333;
+  }
+  
+  
+  .header-body h1 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  .fall-text {
+    color: #6c757d;
+    font-size: 15px;
+    margin-top: 4px;
+  }
+  
+  
+  .box {
+    background-color: white;
+    margin: 15px;
+    border-radius: 5px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .list-item:last-child {
+    border-bottom: none;
+  }
+  
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #22e1cb;
+    border-radius: 4px;
+    margin-right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .checkbox.checked {
+    background-color: #22e1cb; 
+    border-color: #22e1cb;
+  }
+  
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .goal {
+    font-size: 16px;
+    font-weight: 400;
+    color: #495057;
+  }
+  
+  .tag {
+    font-size: 14px;
+    font-weight: 300;
+    color: #22e1cb;
+    margin-top: 4px;
+  }
+  
+  .end-add {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6c757d;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .end-add:hover {
+    text-decoration: underline;
+  }
+  
