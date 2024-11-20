@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,24 +7,74 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="weekly-goals.component.scss"> 
+    <link rel="stylesheet" href="weekly-goals-modal.component.scss">
+
 </head>
 
 <body>
-    <div class="header">
-        <div class="header-body">
-            <h1> Weekly Goals </h1>
-            <div class="fall-text"> 9/24 - 9/30 </div>
+    
+  
+    <div class="modal-wrapper">
+        
+        <div class="modal">
+            <div class="modal-header">
+                <div class="header">
+                    <div class="header-body">
+                        <h1>Weekly Goals</h1>
+                        <div class="fall-text">9/24 - 9/30</div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="modal-body">
+                <div class="goal-item">
+                    <input
+                        type="text"
+                        class="goal-input"
+                        value="Finish Google cover letter"
+                        placeholder="Enter your goal..."
+                    />
+                    <select class="goal-category">
+                        <option>#apply-internships</option>
+                    </select>
+                </div>
+                <div class="goal-item">
+                    <input
+                        type="text"
+                        class="goal-input"
+                        value="Apply to Microsoft"
+                        placeholder="Enter your goal..."
+                    />
+                    <select class="goal-category">
+                        <option>#apply-internships</option>
+                    </select>
+                </div>
+                <div class="goal-item">
+                    <input
+                        type="text"
+                        class="goal-input"
+                        value="Practice implementing data structures"
+                        placeholder="Enter your goal..."
+                    />
+                    <select class="goal-category">
+                        <option>#class-algorithms</option>
+                    </select>
+                </div>
+                <div class="goal-item">
+                    <input
+                        type="text"
+                        class="goal-input"
+                        placeholder="Enter your goal..."
+                    />
+                    <select class="goal-category">
+                        <option>quarterly goal...</option>
+                    </select>
+                </div>
+            </div>
+    
+            <div class="modal-footer">
+                <button class="save-button" >Save</button>
+            </div>
         </div>
     </div>
-
-    <div class="box">
-        <div class="list-item">
-            <div class = "item"> Google cover letter </div>
-    
-            </div>
-    </div>
-    <h1 class="end-add"> + Add a weekly goal </h1>
-
-</body>
-</html>
+</body>    

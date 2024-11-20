@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-weekly-goals-modal',
   standalone: true,
-  imports: [],
+  imports: [CommonModule], 
   templateUrl: './weekly-goals-modal.component.html',
-  styleUrl: './weekly-goals-modal.component.scss'
+  styleUrls: ['./weekly-goals-modal.component.scss']
 })
 export class WeeklyGoalsModalComponent {
-
 }
+

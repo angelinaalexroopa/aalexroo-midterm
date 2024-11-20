@@ -21,3 +21,4 @@ describe('WeeklyGoalsComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
