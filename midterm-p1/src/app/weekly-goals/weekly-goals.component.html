@@ -1,47 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Goals</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="weekly-goals.component.scss"> 
-</head>
-
-<body>
-
-    <div class="box">
-        <div class="header-body">
-            <h1> Weekly Goals </h1>
-            <div class="fall-text"> 9/24 - 9/30 </div>
-        </div>
-        <div class="list-item">
-            <div class="checkbox"></div>
-            <div class="text">
-                <div class="goal"> Finish Google cover letter... </div>
-                <div class="tag"> #apply-internships </div>
+<div class="rectangle">
+    <div class="top">
+        <div class="toptext">
+            <p>Weekly Goals</p>
+            <div class="pencil" (click)="openModal()">
+                <svg width="21" height="21" viewBox=" 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.2093 1.544C17.49 -0.181334 14.6938 -0.181334 12.9745 1.544L1.54314 12.9823C1.45376 13.0718 1.39844 13.1868 1.38141 13.3104L0.534493 19.5897C0.508957 19.7687 0.572796 19.9476 0.696216 20.0711C0.802614 20.1776 0.95157 20.2415 1.10053 20.2415C1.12606 20.2415 1.1516 20.2415 1.17713 20.2373L4.95636 19.7261C5.2713 19.6835 5.4926 19.3938 5.45004 19.0785C5.40749 18.7633 5.11808 18.5418 4.80315 18.5844L1.77296 18.9933L2.36452 14.614L6.9694 19.2234C7.07579 19.3299 7.22475 19.3938 7.37371 19.3938C7.52266 19.3938 7.67162 19.3341 7.77802 19.2234L19.2093 7.78504C20.0435 6.95006 20.5031 5.84243 20.5031 4.66239C20.5031 3.48234 20.0435 2.37472 19.2093 1.544ZM13.1958 2.94983L15.1152 4.87113L4.68398 15.3126L2.76458 13.3913L13.1958 2.94983ZM7.37796 18.005L5.50111 16.1263L15.9323 5.68481L17.8091 7.56351L7.37796 18.005ZM18.6093 6.74131L14.0171 2.14468C14.6002 1.66329 15.328 1.39916 16.094 1.39916C16.9665 1.39916 17.7836 1.73997 18.4007 2.35342C19.0178 2.96687 19.354 3.78907 19.354 4.66239C19.354 5.43347 19.0902 6.15768 18.6093 6.74131Z" fill="#2DBDB1"/>
+                </svg>
             </div>
         </div>
-
-        <div class="list-item">
-            <div class="checkbox"></div>
-            <div class="text">
-                <div class="goal"> Apply to Microsoft </div>
-                <div class="tag"> #apply-internships </div>
+    </div>
+    <p class="week">9/24 - 9/30</p>
+    <div class="middle">
+        <div *ngFor="let goal of goals" class="goalitem">
+            <div class="checkbox">
+              <mat-checkbox class="check"></mat-checkbox>
+            </div>
+            <div class="itemtext">
+                <div class="goal">{{goal.name}}</div>
+                <div class="hash2" [style.color]="goal.hash === '#apply-internships' ? '#2DBDB1' : '#EE8B72'">{{goal.hash}}</div>
+                <hr>
             </div>
         </div>
-
-        <div class="list-item">
-            <div class="checkbox"></div>
-            <div class="text">
-                <div class="goal"> Practice implementing data structures... </div>
-                <div class="tag"> #interview-technical </div>
-            </div>
-        </div>
-        <h1 class="end-add" onclick="openModal()"> + Add a weekly goal </h1>
+        <div class="addgoal" (click)="openModal()">+ Add a weekly goal</div>
+    </div>
     </div>
 
-</body>
-</html>

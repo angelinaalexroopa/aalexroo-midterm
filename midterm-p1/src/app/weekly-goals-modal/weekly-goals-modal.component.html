@@ -1,80 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Goals</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="weekly-goals-modal.component.scss">
-
-</head>
-
-<body>
-    
-  
-    <div class="modal-wrapper">
-        
-        <div class="modal">
-            <div class="modal-header">
-                <div class="header">
-                    <div class="header-body">
-                        <h1>Weekly Goals</h1>
-                        <div class="fall-text">9/24 - 9/30</div>
-                    </div>
-                </div>
-            </div>
-    
-            <div class="modal-body">
-                <div class="goal-item">
-                    <input
-                        type="text"
-                        class="goal-input"
-                        value="Finish Google cover letter"
-                        placeholder="Enter your goal..."
-                    />
-                    <select class="goal-category">
-                        <option>#apply-internships</option>
-                    </select>
-                </div>
-                <div class="goal-item">
-                    <input
-                        type="text"
-                        class="goal-input"
-                        value="Apply to Microsoft"
-                        placeholder="Enter your goal..."
-                    />
-                    <select class="goal-category">
-                        <option>#apply-internships</option>
-                    </select>
-                </div>
-                <div class="goal-item">
-                    <input
-                        type="text"
-                        class="goal-input"
-                        value="Practice implementing data structures"
-                        placeholder="Enter your goal..."
-                    />
-                    <select class="goal-category">
-                        <option>#class-algorithms</option>
-                    </select>
-                </div>
-                <div class="goal-item">
-                    <input
-                        type="text"
-                        class="goal-input"
-                        placeholder="Enter your goal..."
-                    />
-                    <select class="goal-category">
-                        <option>quarterly goal...</option>
-                    </select>
-                </div>
-            </div>
-    
-            <div class="modal-footer">
-                <button class="save-button" >Save</button>
+<div class="container">
+    <div class="top">
+        <div class="toptext">
+            <p>Weekly Goals</p>
+            <div class="x">
+                <svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M28.8749 9.875L10.1249 28.625" stroke="#4B5853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M10.1249 9.875L28.8749 28.625" stroke="#4B5853" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
             </div>
         </div>
     </div>
-</body>    
+    <p class="weeks">9/24 - 9/30</p>
+    <div class="middle">
+        <div *ngFor="let goal of goals" class="goalcontainer">
+            <div class="dots" (click)="closeModal()">
+                <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.6875 25C11.0833 25 10.5677 24.7865 10.1406 24.3594C9.71354 23.9323 9.5 23.4167 9.5 22.8125C9.5 22.2083 9.71354 21.6927 10.1406 21.2656C10.5677 20.8385 11.0833 20.625 11.6875 20.625C12.2917 20.625 12.8073 20.8385 13.2344 21.2656C13.6615 21.6927 13.875 22.2083 13.875 22.8125C13.875 23.4167 13.6615 23.9323 13.2344 24.3594C12.8073 24.7865 12.2917 25 11.6875 25ZM19.8125 25C19.2083 25 18.6927 24.7865 18.2656 24.3594C17.8385 23.9323 17.625 23.4167 17.625 22.8125C17.625 22.2083 17.8385 21.6927 18.2656 21.2656C18.6927 20.8385 19.2083 20.625 19.8125 20.625C20.4167 20.625 20.9323 20.8385 21.3594 21.2656C21.7865 21.6927 22 22.2083 22 22.8125C22 23.4167 21.7865 23.9323 21.3594 24.3594C20.9323 24.7865 20.4167 25 19.8125 25ZM11.6875 17.1875C11.0833 17.1875 10.5677 16.974 10.1406 16.5469C9.71354 16.1198 9.5 15.6042 9.5 15C9.5 14.3958 9.71354 13.8802 10.1406 13.4531C10.5677 13.026 11.0833 12.8125 11.6875 12.8125C12.2917 12.8125 12.8073 13.026 13.2344 13.4531C13.6615 13.8802 13.875 14.3958 13.875 15C13.875 15.6042 13.6615 16.1198 13.2344 16.5469C12.8073 16.974 12.2917 17.1875 11.6875 17.1875ZM19.8125 17.1875C19.2083 17.1875 18.6927 16.974 18.2656 16.5469C17.8385 16.1198 17.625 15.6042 17.625 15C17.625 14.3958 17.8385 13.8802 18.2656 13.4531C18.6927 13.026 19.2083 12.8125 19.8125 12.8125C20.4167 12.8125 20.9323 13.026 21.3594 13.4531C21.7865 13.8802 22 14.3958 22 15C22 15.6042 21.7865 16.1198 21.3594 16.5469C20.9323 16.974 20.4167 17.1875 19.8125 17.1875ZM11.6875 9.375C11.0833 9.375 10.5677 9.16146 10.1406 8.73438C9.71354 8.30729 9.5 7.79167 9.5 7.1875C9.5 6.58333 9.71354 6.06771 10.1406 5.64062C10.5677 5.21354 11.0833 5 11.6875 5C12.2917 5 12.8073 5.21354 13.2344 5.64062C13.6615 6.06771 13.875 6.58333 13.875 7.1875C13.875 7.79167 13.6615 8.30729 13.2344 8.73438C12.8073 9.16146 12.2917 9.375 11.6875 9.375ZM19.8125 9.375C19.2083 9.375 18.6927 9.16146 18.2656 8.73438C17.8385 8.30729 17.625 7.79167 17.625 7.1875C17.625 6.58333 17.8385 6.06771 18.2656 5.64062C18.6927 5.21354 19.2083 5 19.8125 5C20.4167 5 20.9323 5.21354 21.3594 5.64062C21.7865 6.06771 22 6.58333 22 7.1875C22 7.79167 21.7865 8.30729 21.3594 8.73438C20.9323 9.16146 20.4167 9.375 19.8125 9.375Z" fill="#2DBDB1" />
+                </svg>
+            </div>
+            <input type="text" [(ngModel)]="goal.name" placeholder="Enter your goal..." class="goal-input" (keydown)="onKeyboardPress($event)" />
+            <div class="dropdown-container-internships">
+                <mat-form-field appearance="fill">
+                    <mat-select
+                        [(value)]="goal.hash"
+                        (selectionChange)="changeHashColor()"
+                        [style.color]="goal.hash === '#apply-internships' ? '#2DBDB1' : '#EE8B72'"
+                    >
+                        <mat-option value="#apply-internships">#apply-internships</mat-option>
+                        <mat-option value="#class-algorithms">#class-algorithms</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="goalcontainer">
+            <div class="dots" (click)="closeModal()">
+                <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="..." fill="#2DBDB1" />
+                </svg>
+            </div>
+            <input type="text" [(ngModel)]="inputGoalName" placeholder="Enter your goal..." class="goal-input" (keydown)="onKeyboardPress($event)" />
+            <div class="dropdown-container-internships">
+                <mat-form-field appearance="fill">
+                    <mat-select
+                        [(value)]="inputGoalHash"
+                        (selectionChange)="changeHashColor()"
+                        [style.color]="inputGoalHash === '#apply-internships' ? '#2DBDB1' : '#EE8B72'"
+                    >
+                        <mat-option value="#apply-internships">#apply-internships</mat-option>
+                        <mat-option value="#class-algorithms">#class-algorithms</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+</div>
+   

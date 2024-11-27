@@ -1,110 +1,173 @@
 
-body {
-    font-family: 'Oxygen', sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f4f8; 
-    height: 100vh;
-  }
-  
-  .modal-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
-  }
-  
-  .modal {
-    background-color: #ffffff;
-    border-radius: 10px;
-    width: 600px;
-    max-width: 90%;
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-  
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .modal-header h1 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #333333;
-    margin: 0;
-  }
-  
-  .modal-header .fall-text {
-    font-size: 14px;
-    color: #888888;
-  }
-  
-  .modal-body {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .goal-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    padding: 10px;
-  }
-  
-  .goal-input {
-    flex: 1;
-    border: none;
-    font-size: 16px;
-    color: #555555;
-    background: transparent;
-    outline: none;
-    margin-right: 10px;
-  }
-  
-  .goal-category {
-    font-size: 14px;
-    color: #555555;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-  }
-  
-  .goal-category:focus {
-    outline: none;
-  }
-  
-  .modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-  }
-  
-  .save-button {
-    padding: 10px 20px;
-    background-color: #00c4b3; 
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .save-button:hover {
-    background-color: #00a494; 
-  }
-  
+.container {
+  font-family: 'Oxygen';
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 900px;
+  margin: auto;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+}
+
+.toptext {
+  display: flex;
+  font-size: 30px;
+  font-weight: 400;
+  text-align: left;
+  color: #4B5853;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.weeks {
+  color: #4B5853;
+  text-align: left;
+  font-size: 22.5px;
+  font-weight: 600;
+  margin-bottom: 38px;
+  margin-top: 10px;
+}
+
+.goalcontainer{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.dots {
+  margin-right: 10px;
+}
+.goal {
+  font-family: 'Oxygen';
+  font-size: 19.1px;
+  font-weight: 300;
+  width: 60%;
+  border-bottom: 2px solid #4B5853;
+}
+
+.newgoal {
+font-family: 'Oxygen';
+  font-size: 19.1px;
+  font-weight: 300;
+  width: 60%;
+  border-bottom: 2px solid #4B5853;
+}
+
+.goal-input {
+  font-family: 'Oxygen';
+  font-size: 19.1px;
+  font-weight: 300;
+  border: none;
+}
+
+.goal-input:focus {
+  border: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+.dropdown-container-internships {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 30px;
+  width: 50%;
+  border-bottom: 2px solid #2DBDB1;
+
+  .internshiphashtag {
+    font-family: 'Oxygen';
+    font-size: 19.1px;
+    font-weight: 300;
+    color: #2DBDB1;
+}
+
+.algorithmshashtag {
+    font-family: 'Oxygen';
+    font-size: 19.1px;
+    font-weight: 300;
+    color: #FFB987;
+}
+
+.selecthashtag {
+    font-family: 'Oxygen';
+    font-size: 19.1px;
+    font-weight: 300;
+    color: #8FA89F;
+}
+
+.triangle {
+  margin-left: 10px;
+}
+}
+
+.dropdown-container-algorithms {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-left: 30px;
+width: 50%;
+border-bottom: 2px solid #FFB987;
+
+.internshiphashtag {
+  font-family: 'Oxygen';
+  font-size: 19.1px;
+  font-weight: 300;
+  color: #2DBDB1;
+}
+
+.algorithmshashtag {
+  font-family: 'Oxygen';
+  font-size: 19.1px;
+  font-weight: 300;
+  color: #FFB987;
+}
+
+.selecthashtag {
+  font-family: 'Oxygen';
+  font-size: 19.1px;
+  font-weight: 300;
+  color: #8FA89F;
+}
+
+.triangle {
+margin-left: 10px;
+}
+}
+
+.dropdown-container-goals {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+margin-left: 30px;
+width: 50%;
+border-bottom: 2px solid #8FA89F;
+
+.internshiphashtag {
+  font-family: 'Oxygen';
+  font-size: 19.1px;
+  font-weight: 300;
+  color: #2DBDB1;
+}
+
+.algorithmshashtag {
+  font-family: 'Oxygen';
+  font-size: 19.1px;
+  font-weight: 300;
+  color: #FFB987;
+}
+
+.selecthashtag {
+  font-family: 'Oxygen';
+  font-size: 19.1px;
+  font-weight: 300;
+  color: #8FA89F;
+}
+}

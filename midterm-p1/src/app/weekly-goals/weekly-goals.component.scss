@@ -1,91 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+
+.rectangle {
+  width: 387px;
+  height: 591px;
+  border-radius: 12.5px 12.5px 0px 0px;
+  border-top: 3.75px solid #CCEFEC;
+  border-right: 3.75px solid #CCEFEC;
+  border-left: 3.75px solid #CCEFEC;
+  background: #FFF;
+  box-shadow: 0px 8.75px 8.75px 0px rgba(0, 0, 0, 0.10);
+  display: flex;
+  flex-direction: column;
+  padding: 35px;
+  margin: auto;
+
+    .top {
+      display: flex;
+      flex-direction: row;
+
+      .toptext {
+        display: flex;
+        font-family: 'Oxygen';
+        font-size: 27.5px;
+        font-weight: 400;
+        text-align: left;
+        color: #4B5853;
+        justify-content: space-between;
+        width: 100%;
+        align-items: self-start;
+
+        .pencil {
+            display: flex;
+            flex-direction: row-reverse;
+            cursor: pointer;
+          }
+      }
+    }
+
+    .week {
+      color: #4B5853;
+      text-align: left;
+      font-family: 'Oxygen';
+      font-size: 22.5px;
+      font-weight: 600;
+      margin-bottom: 38px;
+    }
+
+    .middle {
+      display: flex;
+      flex-direction: column;
+
+      .goalitem {
+          display: flex;
+          gap: 10px;
+          padding: 15px;
+
+          .itemtext {
+              flex-direction: column;
+              font-family: 'Oxygen';
+              font-size: 16.25px;
+              font-weight: 400;
+              color: #5A5A5A;
+              margin: 0px;
+
+              p {
+                  margin: 0px;
+              }
+
+              .hash1 {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: #FFB987;
+                font-size: 15px;
+              }
+
+              .hash2 {
+                  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                  color: #2DBDB1;
+                  font-size: 15px;
+              }
+
+              .hash3 {
+                  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                  color: #EE8B72;
+                  font-size: 15px;
+              }
+          }
+      }
+  }
+}
+
+.goalitem:first-child{
+    background-color: #CCEFEC40;
+}
+
+hr {
+    border-top: 1px solid lightgray;
+    width: 300px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+.addgoal {
+    font-size: 17.5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #5A5A5A;
+    margin-top: 10px;
+}
 
 
-body {
-    font-family: 'Oxygen', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f6f7fb;
-    color: #333;
-  }
-  
-  
-  .header-body h1 {
-    margin: 0;
-    font-size: 25px;
-    font-weight: 700;
-  }
-  
-  .fall-text {
-    color: #6c757d;
-    font-size: 15px;
-    margin-top: 4px;
-  }
-  
-  
-  .box {
-    background-color: white;
-    margin: 15px;
-    border-radius: 10px;
-    padding: 16px;
-    box-shadow: 0 2px 4px rgba(35, 225, 209, 0.806);
-  }
-  
-  .list-item {
-    display: flex;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #e9ecef;
-  }
-  
-  .list-item:last-child {
-    border-bottom: none;
-  }
-  
-  .checkbox {
-    width: 20px;
-    height: 20px;
-    border: 2px solid #22e1cb;
-    border-radius: 4px;
-    margin-right: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .checkbox.checked {
-    background-color: #22e1cb; 
-    border-color: #22e1cb;
-  }
-  
-  .text {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .goal {
-    font-size: 16px;
-    font-weight: 400;
-    color: #495057;
-  }
-  
-  .tag {
-    font-size: 14px;
-    font-weight: 300;
-    color: #22e1cb;
-    margin-top: 4px;
-  }
-  
-  .end-add {
-    text-align: left;
-    font-size: 16px;
-    font-weight: 400;
-    color: #6c757d;
-    cursor: pointer;
-    padding: 10px;
-    margin: 10px;
-  }
-  
-  .end-add:hover {
-    text-decoration: underline;
-  }
+
+@media screen and (min-width: 768px) {
+    .rectangle {
+        width: 30vw;
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .rectangle {
+        width: 50vw;
+        height: 100vh;
+        padding: 5vw;
+        background-color: plum;
+    }
+
+    .toptext {
+        font-size: 50rem;
+    }
+
+    .itemtext {
+        font-size: 50rem;
+    }
+
+    .hash1 {
+        font-size: 50rem;
+    }
+
+    .hash2 {
+        font-size: 50rem;
+    }
+
+    .hash3 {
+        font-size: 50rem;
+    }
+}
+
+::ng-deep .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background {
+  border-color: #2DBDB1 !important;
+  background-color: white !important;
+}
+
+::ng-deep.mdc-checkbox__checkmark {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+width: 100%;
+opacity: 0;
+transition: opacity 180ms cubic-bezier(0.4, 0, 0.6, 1);
+color: #2DBDB1 !important;
+}
+
+::ng-deep.mdc-checkbox__background {
+display: inline-flex;
+position: absolute;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
+width: 22px !important;
+height: 22px !important;
+border: 2px solid #2DBDB1 !important;
+border-radius: 4px !important;
+background-color: rgba(0, 0, 0, 0);
+pointer-events: none;
+will-change: background-color, border-color;
+transition: background-color 90ms cubic-bezier(0.4, 0, 0.6, 1), border-color 90ms cubic-bezier(0.4, 0, 0.6, 1);
+-webkit-print-color-adjust: exact;
+color-adjust: exact;
+border-color: var(--mdc-checkbox-unselected-icon-color, var(--mat-app-on-surface-variant));
+top: calc((var(--mdc-checkbox-state-layer-size, 40px) - 18px) / 2);
+left: calc((var(--mdc-checkbox-state-layer-size, 40px) - 18px) / 2);
+}
   
